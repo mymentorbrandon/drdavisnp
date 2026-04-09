@@ -83,7 +83,7 @@ section{padding:90px 80px}
 #services .section-sub{color:rgba(248,244,238,0.6)}
 .services-header{max-width:580px;margin-bottom:56px}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.service-card{background:rgba(255,255,255,0.04);padding:38px 32px;border:1px solid rgba(184,151,90,0.1);transition:background 0.3s,border-color 0.3s,transform 0.3s;cursor:default;position:relative;overflow:hidden}
+.service-card{background:rgba(255,255,255,0.04);padding:38px 32px;border:1px solid rgba(184,151,90,0.1);transition:background 0.3s,border-color 0.3s,transform 0.3s;position:relative;overflow:hidden;display:block;text-decoration:none;color:inherit}
 .service-card::before{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width 0.4s}
 .service-card:hover{background:rgba(184,151,90,0.08);border-color:rgba(184,151,90,0.3);transform:translateY(-4px)}
 .service-card:hover::before{width:100%}
@@ -265,8 +265,8 @@ footer{background:var(--deep);padding:56px 80px 36px}
     <p class="story-text">Her oldest son served as an infantry Marine in the United States Marine Corps, completing two tours of duty. The demands of that service &mdash; physically brutal and relentless &mdash; took a significant toll on his body. When he returned, Dr. Laurie watched the VA work through his injuries. What she saw troubled her deeply: a system too quick to recommend surgery, and providers too willing to reach for narcotics and steroid injections as the first and only answer to pain.</p>
     <p class="story-text">Her younger son was a competitive mixed martial artist &mdash; and with that came a different set of physical challenges, but the same frustrating pattern when he sought care. Quick diagnoses. Fast referrals to surgery. Prescriptions to numb the pain rather than find its source.</p>
     <blockquote class="story-quote">&ldquo;I had been watching these clinics for years &mdash; handing out narcotics like they were the only tool in the box, or rushing patients straight to surgery without ever asking why. That&rsquo;s not healing. That&rsquo;s not medicine the way I believe it should be practiced.&rdquo;</blockquote>
-    <p class="story-text">Dr. Laurie and her partners founded <strong style="color:var(--cream)">In Good Health</strong> in 2006 with a different vision &mdash; a family practice built around something most clinics had stopped offering: time, attention, and a genuine commitment to understanding what was actually happening in a patient&rsquo;s body.</p>
-    <p class="story-text">Today, Dr. Laurie takes that mission a step further by bringing care directly into her patients&rsquo; homes across <strong style="color:var(--cream)">Tennessee and Georgia</strong>.</p>
+    <p class="story-text">Dr. Laurie and her partners founded <strong style="color:var(--cream)">In Good Health</strong> in 2006 with a different vision &mdash; a family practice built around something most clinics had stopped offering: time, attention, and a genuine commitment to understanding what was actually happening in a patient&rsquo;s body. The goal was never just to manage symptoms. It was to restore real function and real wellness.</p>
+    <p class="story-text">Today, Dr. Laurie takes that mission a step further by bringing care directly into her patients&rsquo; homes across <strong style="color:var(--cream)">Tennessee and Georgia</strong>. From Chattanooga and across both states, she delivers private in-home consultations, regenerative therapies, and follow-up care &mdash; so her patients never have to compromise on the quality of their care again.</p>
     <div class="story-stats">
       <div class="story-stat"><span class="story-stat-label">Founded</span><span class="story-stat-val">2006</span><span class="story-stat-sub">In Good Health</span></div>
       <div class="story-stat"><span class="story-stat-label">Driven By</span><span class="story-stat-val">Family</span><span class="story-stat-sub">A Marine. A fighter.</span></div>
@@ -284,12 +284,12 @@ footer{background:var(--deep);padding:56px 80px 36px}
     <p class="section-sub">Every service is delivered privately &mdash; in your home, on your schedule, with full attention on you.</p>
   </div>
   <div class="services-grid">
-    <div class="service-card fade-up"><div class="service-icon">🌿</div><h3 class="service-name">Stem Cell Therapy</h3><p class="service-desc">Harness the regenerative power of umbilical cord mesenchymal stem cells to reduce inflammation, relieve chronic pain, and restore your body&rsquo;s natural healing &mdash; without surgery.</p><span class="service-tag">Regenerative &middot; Natural &middot; Non-surgical</span></div>
-    <div class="service-card fade-up"><div class="service-icon">⚖️</div><h3 class="service-name">Bioidentical Hormone Therapy</h3><p class="service-desc">Customized hormone restoration using compounds structurally identical to those your body produces. Restore energy, mood, libido, and mental clarity.</p><span class="service-tag">BHRT &middot; Personalized &middot; Lab-Guided</span></div>
-    <div class="service-card fade-up"><div class="service-icon">💉</div><h3 class="service-name">Peptide Therapy</h3><p class="service-desc">Targeted peptide protocols supporting weight management, muscle recovery, immune function, and anti-aging &mdash; working with your body&rsquo;s own signaling systems.</p><span class="service-tag">Precision &middot; Restorative &middot; Evidence-based</span></div>
-    <div class="service-card fade-up"><div class="service-icon">🏠</div><h3 class="service-name">Private In-Home Care</h3><p class="service-desc">Dr. Laurie comes to you. No waiting rooms. No rushed appointments. Full clinical attention in the comfort and privacy of your home across TN and GA.</p><span class="service-tag">Home Visit &middot; Private &middot; Personal</span></div>
-    <div class="service-card fade-up"><div class="service-icon">🧬</div><h3 class="service-name">General Wellness &amp; Prevention</h3><p class="service-desc">Comprehensive wellness evaluations, lab interpretation, nutrition guidance, and proactive health planning designed to keep you performing at your best.</p><span class="service-tag">Preventive &middot; Holistic &middot; Family Care</span></div>
-    <div class="service-card fade-up"><div class="service-icon">🔬</div><h3 class="service-name">Natural Pain Management</h3><p class="service-desc">Alternative approaches to chronic and acute pain &mdash; targeting the root cause with regenerative and integrative therapies rather than masking symptoms.</p><span class="service-tag">Drug-free &middot; Root Cause &middot; Lasting Relief</span></div>
+    <a href="stem-cell-therapy.html" class="service-card fade-up"><div class="service-icon">🌿</div><h3 class="service-name">Stem Cell Therapy</h3><p class="service-desc">Harness the regenerative power of umbilical cord mesenchymal stem cells to reduce inflammation, relieve chronic pain, and restore your body&rsquo;s natural healing &mdash; without surgery.</p><span class="service-tag">Regenerative &middot; Natural &middot; Non-surgical</span></a>
+    <a href="bioidentical-hormone-therapy.html" class="service-card fade-up"><div class="service-icon">⚖️</div><h3 class="service-name">Bioidentical Hormone Therapy</h3><p class="service-desc">Customized hormone restoration using compounds structurally identical to those your body produces. Restore energy, mood, libido, and mental clarity.</p><span class="service-tag">BHRT &middot; Personalized &middot; Lab-Guided</span></a>
+    <a href="peptide-therapy.html" class="service-card fade-up"><div class="service-icon">💉</div><h3 class="service-name">Peptide Therapy</h3><p class="service-desc">Targeted peptide protocols supporting weight management, muscle recovery, immune function, and anti-aging &mdash; working with your body&rsquo;s own signaling systems.</p><span class="service-tag">Precision &middot; Restorative &middot; Evidence-based</span></a>
+    <a href="private-in-home-care.html" class="service-card fade-up"><div class="service-icon">🏠</div><h3 class="service-name">Private In-Home Care</h3><p class="service-desc">Dr. Laurie comes to you. No waiting rooms. No rushed appointments. Full clinical attention in the comfort and privacy of your home across TN and GA.</p><span class="service-tag">Home Visit &middot; Private &middot; Personal</span></a>
+    <a href="general-wellness.html" class="service-card fade-up"><div class="service-icon">🧬</div><h3 class="service-name">General Wellness &amp; Prevention</h3><p class="service-desc">Comprehensive wellness evaluations, lab interpretation, nutrition guidance, and proactive health planning designed to keep you performing at your best.</p><span class="service-tag">Preventive &middot; Holistic &middot; Family Care</span></a>
+    <a href="natural-pain-management.html" class="service-card fade-up"><div class="service-icon">🔬</div><h3 class="service-name">Natural Pain Management</h3><p class="service-desc">Alternative approaches to chronic and acute pain &mdash; targeting the root cause with regenerative and integrative therapies rather than masking symptoms.</p><span class="service-tag">Drug-free &middot; Root Cause &middot; Lasting Relief</span></a>
   </div>
 </section>
 
@@ -325,7 +325,7 @@ footer{background:var(--deep);padding:56px 80px 36px}
     <p class="section-sub">The private patient relationship means Dr. Laurie is your provider &mdash; not a system. She sees you, not a chart.</p>
     <div class="private-steps">
       <div class="private-step"><div class="step-number">01</div><div><div class="step-title">Request a Consultation</div><p class="step-desc">Submit your request online or call (423) 867-4969 directly. Dr. Laurie&rsquo;s team will reach out within 24 hours to understand your needs and schedule your first visit.</p></div></div>
-      <div class="private-step"><div class="step-number">02</div><div><div class="step-title">Online Assessment via Google Meet</div><p class="step-desc">Your initial assessment is conducted privately over Google Meet &mdash; no travel required, no waiting rooms. Dr. Laurie takes the time to truly understand your health history, current symptoms, and goals.</p></div></div>
+      <div class="private-step"><div class="step-number">02</div><div><div class="step-title">Online Assessment via Google Meet</div><p class="step-desc">Your initial assessment is conducted privately over Google Meet &mdash; no travel required, no waiting rooms. Dr. Laurie takes the time to truly understand your health history, current symptoms, and goals before recommending anything.</p></div></div>
       <div class="private-step"><div class="step-number">03</div><div><div class="step-title">Your Personalized Plan</div><p class="step-desc">Based on your assessment and labs, Dr. Laurie builds a customized protocol &mdash; whether that&rsquo;s stem cell therapy, hormones, peptides, or a combination approach.</p></div></div>
       <div class="private-step"><div class="step-number">04</div><div><div class="step-title">Ongoing Private Relationship</div><p class="step-desc">You have direct access to Dr. Laurie. As your health evolves, your plan evolves. This is medicine the way it was meant to be &mdash; personal, continuous, and truly yours.</p></div></div>
     </div>
@@ -343,7 +343,7 @@ footer{background:var(--deep);padding:56px 80px 36px}
         <circle cx="290" cy="162" r="6" fill="#B8975A" stroke="#fff" stroke-width="1.5"/>
         <text x="254" y="196" text-anchor="middle" fill="#2C3830" font-family="Georgia,serif" font-size="10" font-style="italic">Chattanooga</text>
       </svg>
-      <p style="font-size:0.75rem;color:var(--muted);margin-top:14px;line-height:1.6;">Based in Chattanooga, TN &mdash; Dr. Laurie travels throughout Tennessee and Georgia.</p>
+      <p style="font-size:0.75rem;color:var(--muted);margin-top:14px;line-height:1.6;">Based in Chattanooga, TN &mdash; Dr. Laurie travels throughout Tennessee and Georgia. Not sure if she serves your area? Reach out and ask.</p>
     </div>
     <div style="background:var(--warm);border-radius:4px;padding:28px;border:1px solid rgba(184,151,90,0.2);">
       <p class="section-eyebrow" style="margin-bottom:10px;">A Note From Dr. Laurie</p>
@@ -369,7 +369,7 @@ footer{background:var(--deep);padding:56px 80px 36px}
       <div class="form-group full"><label>Tell Dr. Laurie What&rsquo;s Going On</label><textarea placeholder="Briefly describe your health goals or what you've been experiencing..."></textarea></div>
       <div class="form-group full">
         <button type="submit" class="btn-book">Request My Private Consultation</button>
-        <p class="form-privacy">&#128274; Your information is completely private and HIPAA-compliant.</p>
+        <p class="form-privacy">&#128274; Your information is completely private and HIPAA-compliant. This form is an inquiry only &mdash; not a medical record or clinical submission.</p>
       </div>
     </form>
     <div class="booking-alts">
@@ -403,7 +403,7 @@ footer{background:var(--deep);padding:56px 80px 36px}
     <div>
       <div class="faq-item fade-up"><div class="faq-q">Is stem cell therapy legal and safe?</div><p class="faq-a">Yes. Umbilical cord mesenchymal stem cell therapy is legal in the United States when administered by a licensed practitioner using properly processed, FDA-registered biologics from accredited labs. Dr. Laurie uses only fully vetted products and obtains informed consent from every patient.</p></div>
       <div class="faq-item fade-up"><div class="faq-q">Does insurance cover these services?</div><p class="faq-a">Most regenerative and alternative wellness services are not covered by traditional insurance. Dr. Laurie&rsquo;s practice operates as a private-pay model, allowing her to focus entirely on your care without insurance restrictions. Transparent pricing is discussed during your consultation.</p></div>
-      <div class="faq-item fade-up"><div class="faq-q">How far does Dr. Laurie travel?</div><p class="faq-a">Dr. Laurie is based in Chattanooga, TN and provides private in-home care throughout Tennessee and Georgia. Reach out at (423) 867-4969 to confirm your area.</p></div>
+      <div class="faq-item fade-up"><div class="faq-q">How far does Dr. Laurie travel?</div><p class="faq-a">Dr. Laurie is based in Chattanooga, TN and provides private in-home care throughout Tennessee and Georgia. Coverage within each state is discussed during intake. Reach out at (423) 867-4969 to confirm your area.</p></div>
     </div>
     <div>
       <div class="faq-item fade-up"><div class="faq-q">What is bioidentical hormone therapy?</div><p class="faq-a">Bioidentical hormones are compounds identical in structure to those your body produces naturally. Unlike synthetic hormones, BHRT is customized based on your lab results and symptoms. It can address fatigue, weight gain, mood changes, brain fog, low libido, and more &mdash; naturally.</p></div>
@@ -426,11 +426,11 @@ footer{background:var(--deep);padding:56px 80px 36px}
     <div>
       <p class="footer-col-title">Services</p>
       <ul class="footer-links">
-        <li><a href="#services">Stem Cell Therapy</a></li>
-        <li><a href="#services">Hormone Therapy</a></li>
-        <li><a href="#services">Peptide Therapy</a></li>
-        <li><a href="#services">In-Home Care</a></li>
-        <li><a href="#services">Pain Management</a></li>
+        <li><a href="stem-cell-therapy.html">Stem Cell Therapy</a></li>
+        <li><a href="bioidentical-hormone-therapy.html">Hormone Therapy</a></li>
+        <li><a href="peptide-therapy.html">Peptide Therapy</a></li>
+        <li><a href="private-in-home-care.html">In-Home Care</a></li>
+        <li><a href="natural-pain-management.html">Pain Management</a></li>
       </ul>
     </div>
     <div>
