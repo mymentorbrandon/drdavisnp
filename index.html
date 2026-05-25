@@ -725,8 +725,8 @@ function showStep(n){
 function goToStep2(){if(!document.getElementById('firstName').value.trim()||!document.getElementById('email').value.trim()){alert('Please fill in your name and email to continue.');return;}showStep(2);}
 function goToStep3(){if(!document.getElementById('interest').value){alert('Please select your primary health interest.');return;}showStep(3);}
 async function submitForm(){
-  const data={timestamp:new Date().toISOString(),firstName:document.getElementById('firstName').value,lastName:document.getElementById('lastName').value,email:document.getElementById('email').value,phone:document.getElementById('phone').value,state:document.getElementById('state').value,interest:document.getElementById('interest').value,duration:document.getElementById('duration').value,notes:document.getElementById('notes').value,availability:document.getElementById('availability').value,source:'drdavisnp.com',status:'New Lead'};
-  const SHEET_URL='https://script.google.com/macros/s/YOUR_APPS_SCRIPT_DEPLOYMENT_ID/exec';
+  const data={timestamp:new Date().toISOString(),firstName:document.getElementById('firstName').value,lastName:document.getElementById('lastName').value,email:document.getElementById('email').value,phone:document.getElementById('phone').value,state:document.getElementById('state').value,interest:document.getElementById('interest').value,duration:document.getElementById('duration').value,notes:document.getElementById('notes').value,availability:document.getElementById('availability').value,formType:'davis',formType:'davis',source:'DrDavisNP.com',status:'New Lead'};
+  const SHEET_URL='https://script.google.com/macros/s/AKfycbww7UjZHKiXx3hMOiX9sBeMkOHIkTQpA35Z_X7DncvzCh09enYzD0IHfftIScfwLmOTcw/exec';
   try{fetch(SHEET_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).catch(()=>{});}catch(e){}
   showStep('success');
 }
