@@ -167,16 +167,16 @@ h2.section-title em{font-style:italic;color:var(--tiffany-deep);}
 .service-tag{font-size:0.6rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--tiffany-deep);}
 .service-tag+.service-tag::before{content:'·';margin-right:6px;color:var(--silver);}
 
-/* STEM CELL */
-.stemcell{background:linear-gradient(135deg,var(--dark) 0%,#0f1e2a 100%);color:white;position:relative;overflow:hidden;}
-.stemcell::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 50%,rgba(10,186,181,0.12) 0%,transparent 60%);pointer-events:none;}
-.stemcell .container{position:relative;z-index:1;}
-.stemcell-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.stemcell .section-eyebrow span{color:var(--tiffany-light);}
-.stemcell .section-eyebrow-line{background:var(--tiffany-light);}
-.stemcell h2.section-title{color:white;}
-.stemcell h2.section-title em{color:var(--tiffany-light);}
-.stemcell .section-desc{color:rgba(255,255,255,0.7);max-width:100%;}
+/* CELLULAR THERAPY */
+.cellulartherapy{background:linear-gradient(135deg,var(--dark) 0%,#0f1e2a 100%);color:white;position:relative;overflow:hidden;}
+.cellulartherapy::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 70% 50%,rgba(10,186,181,0.12) 0%,transparent 60%);pointer-events:none;}
+.cellulartherapy .container{position:relative;z-index:1;}
+.cellulartherapy-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.cellulartherapy .section-eyebrow span{color:var(--tiffany-light);}
+.cellulartherapy .section-eyebrow-line{background:var(--tiffany-light);}
+.cellulartherapy h2.section-title{color:white;}
+.cellulartherapy h2.section-title em{color:var(--tiffany-light);}
+.cellulartherapy .section-desc{color:rgba(255,255,255,0.7);max-width:100%;}
 .stemcell-points{display:flex;flex-direction:column;gap:20px;margin-top:36px;}
 .stemcell-point{display:flex;align-items:flex-start;gap:16px;}
 .stemcell-point-icon{width:36px;height:36px;background:rgba(10,186,181,0.15);border:1px solid rgba(10,186,181,0.3);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;}
@@ -298,7 +298,7 @@ footer{background:var(--dark);color:white;padding:60px 0 32px;}
     <li><a href="#story">Our Story</a></li>
     <li><a href="#qualify">Qualify</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#stemcell">Stem Cell</a></li>
+    <li><a href="#cellulartherapy">Cellular Therapy</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#" class="nav-cta" onclick="openModal();return false;">Book a Consult</a></li>
   </ul>
@@ -313,7 +313,7 @@ footer{background:var(--dark);color:white;padding:60px 0 32px;}
     </div>
     <h1>Medicine the way it <em>should</em> feel.</h1>
     <p class="hero-subtitle">Private · Personal · Pioneering</p>
-    <p class="hero-desc">With over 26 years of clinical expertise, Dr. Laurie Davis brings regenerative medicine, bioidentical hormone therapy, and stem cell treatments to patients across Tennessee and Georgia — with the personal touch that large practices simply cannot offer.</p>
+    <p class="hero-desc">With over 26 years of clinical expertise, Dr. Laurie Davis brings regenerative medicine, bioidentical hormone therapy, and cellular treatments to patients across Tennessee and Georgia — with the personal touch that large practices simply cannot offer.</p>
     <div class="hero-actions">
       <a href="#" class="btn-primary" onclick="openModal();return false;">See If You Qualify</a>
       <a href="#about" class="btn-ghost">Meet Dr. Laurie</a>
@@ -334,14 +334,14 @@ footer{background:var(--dark);color:white;padding:60px 0 32px;}
 <!-- MARQUEE -->
 <div class="marquee-strip">
   <div class="marquee-inner">
-    <span class="marquee-item">Stem Cell Therapy<span class="marquee-dot"></span></span>
+    <span class="marquee-item">Cellular Therapy<span class="marquee-dot"></span></span>
     <span class="marquee-item">Bioidentical Hormone Restoration<span class="marquee-dot"></span></span>
     <span class="marquee-item">Peptide Therapy<span class="marquee-dot"></span></span>
     <span class="marquee-item">Natural Pain Management<span class="marquee-dot"></span></span>
     <span class="marquee-item">Private Consultations · Google Meet<span class="marquee-dot"></span></span>
     <span class="marquee-item">TN &amp; GA<span class="marquee-dot"></span></span>
     <span class="marquee-item">General Wellness &amp; Prevention<span class="marquee-dot"></span></span>
-    <span class="marquee-item">Stem Cell Therapy<span class="marquee-dot"></span></span>
+    <span class="marquee-item">Cellular Therapy<span class="marquee-dot"></span></span>
     <span class="marquee-item">Bioidentical Hormone Restoration<span class="marquee-dot"></span></span>
     <span class="marquee-item">Peptide Therapy<span class="marquee-dot"></span></span>
     <span class="marquee-item">Natural Pain Management<span class="marquee-dot"></span></span>
@@ -398,7 +398,7 @@ footer{background:var(--dark);color:white;padding:60px 0 32px;}
         <div class="mission-values">
           <div class="mission-value"><div class="mission-value-title">Personal Connection</div><div class="mission-value-desc">Every patient is a person, not a chart number. Dr. Davis takes the time to truly understand your story.</div></div>
           <div class="mission-value"><div class="mission-value-title">Root-Cause Medicine</div><div class="mission-value-desc">We don't just manage symptoms. We work to understand and address what's actually driving them.</div></div>
-          <div class="mission-value"><div class="mission-value-title">Pioneering Therapies</div><div class="mission-value-desc">From stem cell regeneration to bioidentical hormones, we bring the future of medicine to patients today.</div></div>
+          <div class="mission-value"><div class="mission-value-title">Pioneering Therapies</div><div class="mission-value-desc">From joint regneration and cellular regeneration to bioidentical hormones, we bring the future of medicine to patients today.</div></div>
           <div class="mission-value"><div class="mission-value-title">Lasting Results</div><div class="mission-value-desc">Our goal isn't to keep you coming back — it's to help you feel so well, you don't have to.</div></div>
         </div>
       </div>
@@ -445,7 +445,7 @@ footer{background:var(--dark);color:white;padding:60px 0 32px;}
         <div class="qualify-cards">
           <div class="qualify-card"><div class="qualify-icon">⚡</div><div><div class="qualify-card-title">Fatigue &amp; Low Energy</div><div class="qualify-card-desc">You feel tired no matter how much you sleep and conventional labs show "everything is normal."</div></div></div>
           <div class="qualify-card"><div class="qualify-icon">⚖️</div><div><div class="qualify-card-title">Stubborn Weight Gain</div><div class="qualify-card-desc">Diet and exercise aren't moving the needle — hormone imbalance or metabolic factors may be the cause.</div></div></div>
-          <div class="qualify-card"><div class="qualify-icon">🦴</div><div><div class="qualify-card-title">Chronic Pain or Joint Issues</div><div class="qualify-card-desc">Regenerative stem cell therapies may help heal from the inside, naturally and without surgery.</div></div></div>
+          <div class="qualify-card"><div class="qualify-icon">🦴</div><div><div class="qualify-card-title">Chronic Pain or Joint Issues</div><div class="qualify-card-desc">Regenerative cellular therapies may help heal from the inside, naturally and without surgery.</div></div></div>
           <div class="qualify-card"><div class="qualify-icon">🧠</div><div><div class="qualify-card-title">Brain Fog &amp; Mood Changes</div><div class="qualify-card-desc">Cognitive clarity is often tied to hormone and metabolic health — and this is very treatable.</div></div></div>
           <div class="qualify-card"><div class="qualify-icon">🌙</div><div><div class="qualify-card-title">Menopause / Andropause Symptoms</div><div class="qualify-card-desc">Hot flashes, low libido, mood swings — bioidentical hormone therapy offers real, lasting relief.</div></div></div>
         </div>
@@ -477,7 +477,7 @@ footer{background:var(--dark);color:white;padding:60px 0 32px;}
     <div class="services-grid fade-up delay-1">
       <a href="#stemcell" class="service-item">
         <div class="service-icon">🌿</div>
-        <div class="service-title">Stem Cell Therapy</div>
+        <div class="service-title">Cellular Therapy</div>
         <div class="service-desc">Harness the regenerative power of umbilical cord mesenchymal stem cells to reduce inflammation, relieve chronic pain, and restore your body's natural healing — without surgery.</div>
         <div class="service-tags"><span class="service-tag">Regenerative</span><span class="service-tag">Natural</span><span class="service-tag">Non-Surgical</span></div>
       </a>
@@ -515,14 +515,14 @@ footer{background:var(--dark);color:white;padding:60px 0 32px;}
   </div>
 </section>
 
-<!-- STEM CELL -->
-<section class="stemcell" id="stemcell">
+<!-- CELLULAR THERAPY -->
+<section class="cellulartherapy" id="cellulartherapy">
   <div class="container">
-    <div class="stemcell-grid">
+    <div class="cellulartherapy-grid">
       <div class="fade-up">
         <div class="section-eyebrow"><div class="section-eyebrow-line"></div><span>Regenerative Medicine</span></div>
-        <h2 class="section-title">Stem cell therapy: healing from <em>within.</em></h2>
-        <p class="section-desc">Rather than masking symptoms, stem cell therapy harnesses your body's own regenerative intelligence — supporting healing at the cellular level, naturally and powerfully.</p>
+        <h2 class="section-title">Cellular therapy: healing from <em>within.</em></h2>
+        <p class="section-desc">Rather than masking symptoms, cellular therapy harnesses your body's own regenerative intelligence — supporting healing at the cellular level, naturally and powerfully.</p>
         <div class="stemcell-points">
           <div class="stemcell-point"><div class="stemcell-point-icon">🔬</div><div><div class="stemcell-point-title">Science-Backed Protocols</div><div class="stemcell-point-desc">Every treatment plan is grounded in current regenerative medicine research and applied with clinical precision.</div></div></div>
           <div class="stemcell-point"><div class="stemcell-point-icon">🎯</div><div><div class="stemcell-point-title">Targeted &amp; Personalized</div><div class="stemcell-point-desc">No two patients are alike. Dr. Davis designs each protocol to your specific biology, goals, and health history.</div></div></div>
@@ -608,7 +608,7 @@ footer{background:var(--dark);color:white;padding:60px 0 32px;}
       <div class="faq-item"><div class="faq-q">Do I need to come in person?</div><div class="faq-a">Initial consultations are conducted via Google Meet, making it simple to connect from anywhere in Tennessee or Georgia. Some treatments may require in-person visits. Dr. Davis also offers select in-home care services for qualifying patients.</div></div>
       <div class="faq-item"><div class="faq-q">What if I'm not sure if I qualify?</div><div class="faq-a">That's exactly what the consultation is for. Dr. Davis has worked with patients across a wide spectrum of health concerns. The best first step is simply a conversation — she'll give you an honest assessment of your options.</div></div>
       <div class="faq-item"><div class="faq-q">Are these treatments covered by insurance?</div><div class="faq-a">Many of Dr. Davis's advanced therapies operate outside traditional insurance models — which is precisely what allows her to offer truly personalized, unrestricted care. She's happy to discuss investment and options during your consultation.</div></div>
-      <div class="faq-item"><div class="faq-q">How is stem cell therapy different from other treatments?</div><div class="faq-a">Rather than suppressing symptoms, stem cell therapy supports your body's own repair processes at the cellular level. It's regenerative by nature — designed to create lasting improvement, not ongoing dependency on medication.</div></div>
+      <div class="faq-item"><div class="faq-q">How is cellular therapy different from other treatments?</div><div class="faq-a">Rather than suppressing symptoms, cellular therapy supports your body's own repair processes at the cellular level. It's regenerative by nature — designed to create lasting improvement, not ongoing dependency on medication.</div></div>
       <div class="faq-item"><div class="faq-q">What states does Dr. Davis serve?</div><div class="faq-a">Dr. Davis is licensed in both Tennessee and Georgia. Patients across both states can access virtual consultations, with in-person and select in-home services available in the greater Chattanooga area.</div></div>
     </div>
     <div style="text-align:center;margin-top:48px;" class="fade-up delay-2">
@@ -636,7 +636,7 @@ footer{background:var(--dark);color:white;padding:60px 0 32px;}
           <li><a href="#story">Our Story &amp; Mission</a></li>
           <li><a href="#qualify">Do You Qualify?</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#stemcell">Stem Cell Therapy</a></li>
+          <li><a href="#cellulartherapy">Cellular Therapy</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
@@ -685,7 +685,7 @@ footer{background:var(--dark);color:white;padding:60px 0 32px;}
         <button class="form-submit" onclick="goToStep2()">Continue →</button>
       </div>
       <div class="modal-step" id="step2">
-        <div class="form-row"><label class="form-label">Primary Health Interest</label><select class="form-input form-select" id="interest"><option value="">What brings you in today?</option><option>Stem Cell Therapy</option><option>Hormone / BHRT</option><option>Peptide Therapy</option><option>Weight Management</option><option>Fatigue / Low Energy</option><option>Chronic Pain</option><option>Natural Pain Management</option><option>General Wellness</option><option>Not sure — need guidance</option></select></div>
+        <div class="form-row"><label class="form-label">Primary Health Interest</label><select class="form-input form-select" id="interest"><option value="">What brings you in today?</option><option>Cellular Therapy</option><option>Hormone / BHRT</option><option>Peptide Therapy</option><option>Weight Management</option><option>Fatigue / Low Energy</option><option>Chronic Pain</option><option>Natural Pain Management</option><option>General Wellness</option><option>Not sure — need guidance</option></select></div>
         <div class="form-row"><label class="form-label">How Long Have You Been Dealing With This?</label><select class="form-input form-select" id="duration"><option value="">Select...</option><option>Less than 6 months</option><option>6 months – 1 year</option><option>1–3 years</option><option>3+ years</option></select></div>
         <div class="form-row"><label class="form-label">Anything Else Dr. Davis Should Know?</label><textarea class="form-input" id="notes" rows="3" placeholder="Optional — any context, questions, or concerns..." style="resize:vertical;"></textarea></div>
         <div class="form-row"><label class="form-label">Preferred Availability</label><select class="form-input form-select" id="availability"><option value="">Select a general window...</option><option>Mornings (9am–12pm)</option><option>Afternoons (12pm–4pm)</option><option>Late Afternoon (4pm–6pm)</option><option>Flexible</option></select></div>
