@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+
+    <!-- Deep navy background -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0D1B2E"/>
+      <stop offset="100%" stop-color="#060D18"/>
+    </radialGradient>
+
+    <!-- Platinum / silver strand left -->
+    <linearGradient id="strandLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8A9BB0"/>
+      <stop offset="40%" stop-color="#C8D8E8"/>
+      <stop offset="100%" stop-color="#6A7A8A"/>
+    </linearGradient>
+
+    <!-- Platinum / silver strand right -->
+    <linearGradient id="strandRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6A7A8A"/>
+      <stop offset="60%" stop-color="#C8D8E8"/>
+      <stop offset="100%" stop-color="#8A9BB0"/>
+    </linearGradient>
+
+    <!-- Teal-aqua accent for base pair rungs -->
+    <linearGradient id="rungGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A6B7A" stop-opacity="0.4"/>
+      <stop offset="30%" stop-color="#20C5D5" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#20C5D5" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1A6B7A" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <!-- Gold accent rung -->
+    <linearGradient id="rungGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7A5A10" stop-opacity="0.3"/>
+      <stop offset="30%" stop-color="#D4A820" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#D4A820" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7A5A10" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Node glow -->
+    <filter id="nodeGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft outer glow for helix strands -->
+    <filter id="helixGlow" x="-30%" y="-10%" width="160%" height="120%">
+      <feGaussianBlur stdDeviation="1.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Circle border gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C8D8E8"/>
+      <stop offset="40%" stop-color="#20C5D5"/>
+      <stop offset="70%" stop-color="#D4A820"/>
+      <stop offset="100%" stop-color="#8A9BB0"/>
+    </linearGradient>
+
+    <!-- Inner ring -->
+    <linearGradient id="innerRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A3050" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0A1828" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Clip to circle -->
+    <clipPath id="circleClip">
+      <circle cx="100" cy="100" r="82"/>
+    </clipPath>
+
+    <!-- Subtle grain texture -->
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
+      <feBlend in="SourceGraphic" in2="grayNoise" mode="overlay" result="blend"/>
+      <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+    </filter>
+
+  </defs>
+
+  <!-- ══ OUTER CIRCLE BACKGROUND ══ -->
+  <circle cx="100" cy="100" r="96" fill="#060D18"/>
+
+  <!-- Decorative outer border ring - gradient stroke -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="url(#borderGrad)" stroke-width="2.5" opacity="0.9"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#C8D8E8" stroke-width="0.4" opacity="0.2"/>
+
+  <!-- Background fill -->
+  <circle cx="100" cy="100" r="87" fill="url(#bgGrad)" clip-path="url(#circleClip)"/>
+
+  <!-- Subtle radial shimmer lines -->
+  <g clip-path="url(#circleClip)" opacity="0.04">
+    <line x1="100" y1="13" x2="100" y2="187" stroke="#C8D8E8" stroke-width="0.5"/>
+    <line x1="13" y1="100" x2="187" y2="100" stroke="#C8D8E8" stroke-width="0.5"/>
+    <line x1="33" y1="33" x2="167" y2="167" stroke="#C8D8E8" stroke-width="0.5"/>
+    <line x1="167" y1="33" x2="33" y2="167" stroke="#C8D8E8" stroke-width="0.5"/>
+  </g>
+
+  <!-- ══ DNA DOUBLE HELIX ══ -->
+  <g clip-path="url(#circleClip)">
+
+    <!-- 
+      Left strand: sinusoidal wave going vertically
+      Right strand: sinusoidal wave phase-shifted 180°
+      Base pair rungs connecting them at each half-period
+      
+      Center x = 100, amplitude = 26, period ~28px vertical
+      Left strand peaks at x=74, troughs at x=126
+      Right strand peaks at x=126, troughs at x=74
+    -->
+
+    <!-- ── BASE PAIR RUNGS (behind strands) ── -->
+    <!-- Rung spacing: every 14px vertical, starting y=34 -->
+
+    <!-- y=34 – teal rung, strands cross at center -->
+    <line x1="74" y1="34" x2="126" y2="34" stroke="url(#rungGrad)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+    <!-- y=48 -->
+    <line x1="100" y1="48" x2="100" y2="48" stroke="url(#rungGrad)" stroke-width="1.8" stroke-linecap="round" opacity="0.0"/>
+    <!-- Actual rung at crossover y=48: both strands at center x=100 — thin dot -->
+
+    <!-- y=55 – gold rung -->
+    <line x1="122" y1="55" x2="78" y2="55" stroke="url(#rungGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- y=69 – teal -->
+    <line x1="74" y1="69" x2="126" y2="69" stroke="url(#rungGrad)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- y=83 – gold -->
+    <line x1="122" y1="83" x2="78" y2="83" stroke="url(#rungGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- y=97 – teal (center of logo) -->
+    <line x1="74" y1="97" x2="126" y2="97" stroke="url(#rungGrad)" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
+
+    <!-- y=111 – gold -->
+    <line x1="122" y1="111" x2="78" y2="111" stroke="url(#rungGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- y=125 – teal -->
+    <line x1="74" y1="125" x2="126" y2="125" stroke="url(#rungGrad)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- y=139 – gold -->
+    <line x1="122" y1="139" x2="78" y2="139" stroke="url(#rungGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- y=153 – teal -->
+    <line x1="74" y1="153" x2="126" y2="153" stroke="url(#rungGrad)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- y=167 – gold -->
+    <line x1="122" y1="167" x2="78" y2="167" stroke="url(#rungGold)" stroke-width="1.8" stroke-linecap="round" opacity="0.85"/>
+
+
+    <!-- ── LEFT STRAND (silver/platinum sinusoid) ── -->
+    <!--
+      Points computed: x = 100 + 26*cos(t), y = t  where t runs from top to bottom
+      Full period = 56px. Half period = 28px.
+      t=20: x=100+26=126   t=34: x=100   t=48: x=74   t=62: x=100   t=76: x=126
+      t=90: x=100  t=104: x=74  t=118: x=100  t=132: x=126  t=146: x=100
+      t=160: x=74  t=174: x=100  t=188: x=126
+    -->
+    <path d="
+      M 126,20
+      C 126,27 100,27 100,34
+      C 100,41 74,41 74,48
+      C 74,55 100,55 100,62
+      C 100,69 126,69 126,76
+      C 126,83 100,83 100,90
+      C 100,97 74,97 74,104
+      C 74,111 100,111 100,118
+      C 100,125 126,125 126,132
+      C 126,139 100,139 100,146
+      C 100,153 74,153 74,160
+      C 74,167 100,167 100,174
+      C 100,181 126,181 126,188
+    "
+    stroke="url(#strandLeft)" stroke-width="3.5" fill="none"
+    stroke-linecap="round" stroke-linejoin="round"
+    filter="url(#helixGlow)" opacity="0.95"/>
+
+    <!-- ── RIGHT STRAND (phase shifted 180°) ── -->
+    <path d="
+      M 74,20
+      C 74,27 100,27 100,34
+      C 100,41 126,41 126,48
+      C 126,55 100,55 100,62
+      C 100,69 74,69 74,76
+      C 74,83 100,83 100,90
+      C 100,97 126,97 126,104
+      C 126,111 100,111 100,118
+      C 100,125 74,125 74,132
+      C 74,139 100,139 100,146
+      C 100,153 126,153 126,160
+      C 126,167 100,167 100,174
+      C 100,181 74,181 74,188
+    "
+    stroke="url(#strandRight)" stroke-width="3.5" fill="none"
+    stroke-linecap="round" stroke-linejoin="round"
+    filter="url(#helixGlow)" opacity="0.95"/>
+
+
+    <!-- ── NODES at strand peaks (glowing dots) ── -->
+    <!-- Left strand peaks (x=126): y=20,76,132,188 -->
+    <circle cx="126" cy="20"  r="4" fill="#C8D8E8" filter="url(#nodeGlow)" opacity="0.9"/>
+    <circle cx="126" cy="76"  r="4.5" fill="#20C5D5" filter="url(#nodeGlow)" opacity="0.95"/>
+    <circle cx="126" cy="132" r="4.5" fill="#D4A820" filter="url(#nodeGlow)" opacity="0.95"/>
+    <circle cx="126" cy="188" r="4"   fill="#C8D8E8" filter="url(#nodeGlow)" opacity="0.9"/>
+
+    <!-- Left strand troughs (x=74): y=48,104,160 -->
+    <circle cx="74" cy="48"  r="4.5" fill="#D4A820" filter="url(#nodeGlow)" opacity="0.95"/>
+    <circle cx="74" cy="104" r="4.5" fill="#20C5D5" filter="url(#nodeGlow)" opacity="0.95"/>
+    <circle cx="74" cy="160" r="4.5" fill="#D4A820" filter="url(#nodeGlow)" opacity="0.95"/>
+
+    <!-- Crossover center nodes (x=100): y=34,62,90,118,146,174 -->
+    <circle cx="100" cy="34"  r="3"   fill="#8AABB8" opacity="0.6"/>
+    <circle cx="100" cy="62"  r="3"   fill="#8AABB8" opacity="0.6"/>
+    <circle cx="100" cy="90"  r="3.5" fill="#C8D8E8" opacity="0.8"/>
+    <circle cx="100" cy="118" r="3"   fill="#8AABB8" opacity="0.6"/>
+    <circle cx="100" cy="146" r="3"   fill="#8AABB8" opacity="0.6"/>
+    <circle cx="100" cy="174" r="3"   fill="#8AABB8" opacity="0.6"/>
+
+  </g>
+
+  <!-- ══ ELEGANT LETTERFORM OVERLAY ══ -->
+  <!-- Thin horizontal rule above text -->
+  <line x1="52" y1="155" x2="148" y2="155" stroke="#C8D8E8" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- "DAVIS" in refined serif caps — platinum -->
+  <text
+    x="100" y="172"
+    font-family="'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif"
+    font-size="15"
+    font-weight="400"
+    letter-spacing="7"
+    fill="#C8D8E8"
+    text-anchor="middle"
+    opacity="0.92"
+  >DAVIS</text>
+
+  <!-- "N.P." small gold subtitle -->
+  <text
+    x="100" y="184"
+    font-family="'Palatino Linotype', Palatino, Georgia, serif"
+    font-size="7.5"
+    font-weight="400"
+    letter-spacing="4"
+    fill="#D4A820"
+    text-anchor="middle"
+    opacity="0.85"
+  >N · P</text>
+
+  <!-- Thin horizontal rule below text -->
+  <line x1="52" y1="190" x2="148" y2="190" stroke="#C8D8E8" stroke-width="0.5" opacity="0.35"/>
+
+  <!-- ══ OUTER DECORATIVE TICK MARKS ══ -->
+  <!-- Four compass-point ticks on the outer ring -->
+  <line x1="100" y1="5"   x2="100" y2="11"  stroke="#C8D8E8" stroke-width="1.2" opacity="0.5"/>
+  <line x1="100" y1="189" x2="100" y2="195" stroke="#C8D8E8" stroke-width="1.2" opacity="0.5"/>
+  <line x1="5"   y1="100" x2="11"  y2="100" stroke="#C8D8E8" stroke-width="1.2" opacity="0.5"/>
+  <line x1="189" y1="100" x2="195" y2="100" stroke="#C8D8E8" stroke-width="1.2" opacity="0.5"/>
+  <!-- Diagonal ticks -->
+  <line x1="23"  y1="23"  x2="27"  y2="27"  stroke="#D4A820" stroke-width="1" opacity="0.4"/>
+  <line x1="177" y1="23"  x2="173" y2="27"  stroke="#D4A820" stroke-width="1" opacity="0.4"/>
+  <line x1="23"  y1="177" x2="27"  y2="173" stroke="#D4A820" stroke-width="1" opacity="0.4"/>
+  <line x1="177" y1="177" x2="173" y2="173" stroke="#D4A820" stroke-width="1" opacity="0.4"/>
+
+</svg>

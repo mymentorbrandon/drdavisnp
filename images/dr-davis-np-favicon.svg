@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0D1B2E"/>
+      <stop offset="100%" stop-color="#060D18"/>
+    </radialGradient>
+    <linearGradient id="sL" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8A9BB0"/>
+      <stop offset="50%" stop-color="#C8D8E8"/>
+      <stop offset="100%" stop-color="#6A7A8A"/>
+    </linearGradient>
+    <linearGradient id="sR" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6A7A8A"/>
+      <stop offset="50%" stop-color="#C8D8E8"/>
+      <stop offset="100%" stop-color="#8A9BB0"/>
+    </linearGradient>
+    <linearGradient id="rT" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A6B7A" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#20C5D5"/>
+      <stop offset="100%" stop-color="#1A6B7A" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="rG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7A5A10" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#D4A820"/>
+      <stop offset="100%" stop-color="#7A5A10" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="bdr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C8D8E8"/>
+      <stop offset="50%" stop-color="#20C5D5"/>
+      <stop offset="100%" stop-color="#D4A820"/>
+    </linearGradient>
+    <filter id="g">
+      <feGaussianBlur stdDeviation="0.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="cc"><circle cx="16" cy="16" r="14"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="16" cy="16" r="15.5" fill="#060D18"/>
+  <circle cx="16" cy="16" r="15" fill="none" stroke="url(#bdr)" stroke-width="0.8"/>
+  <circle cx="16" cy="16" r="14" fill="url(#bg)"/>
+
+  <!-- Rungs -->
+  <g clip-path="url(#cc)">
+    <line x1="9"  y1="6"  x2="23" y2="6"  stroke="url(#rT)" stroke-width="1.1" stroke-linecap="round" opacity="0.85"/>
+    <line x1="21" y1="11" x2="11" y2="11" stroke="url(#rG)" stroke-width="1.1" stroke-linecap="round" opacity="0.85"/>
+    <line x1="9"  y1="16" x2="23" y2="16" stroke="url(#rT)" stroke-width="1.2" stroke-linecap="round" opacity="0.95"/>
+    <line x1="21" y1="21" x2="11" y2="21" stroke="url(#rG)" stroke-width="1.1" stroke-linecap="round" opacity="0.85"/>
+    <line x1="9"  y1="26" x2="23" y2="26" stroke="url(#rT)" stroke-width="1.1" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- Left strand -->
+    <path d="M 23,2 C 23,4 16,4 16,6 C 16,8 9,8 9,11 C 9,13 16,13 16,16 C 16,19 23,19 23,21 C 23,24 16,24 16,26 C 16,29 9,29 9,31"
+      stroke="url(#sL)" stroke-width="1.8" fill="none" stroke-linecap="round" filter="url(#g)"/>
+
+    <!-- Right strand -->
+    <path d="M 9,2 C 9,4 16,4 16,6 C 16,8 23,8 23,11 C 23,13 16,13 16,16 C 16,19 9,19 9,21 C 9,24 16,24 16,26 C 16,29 23,29 23,31"
+      stroke="url(#sR)" stroke-width="1.8" fill="none" stroke-linecap="round" filter="url(#g)"/>
+
+    <!-- Peak nodes -->
+    <circle cx="23" cy="11" r="1.6" fill="#20C5D5" filter="url(#g)" opacity="0.95"/>
+    <circle cx="9"  cy="16" r="1.6" fill="#D4A820" filter="url(#g)" opacity="0.95"/>
+    <circle cx="23" cy="21" r="1.6" fill="#20C5D5" filter="url(#g)" opacity="0.95"/>
+    <circle cx="9"  cy="6"  r="1.4" fill="#C8D8E8" opacity="0.8"/>
+    <circle cx="9"  cy="26" r="1.4" fill="#C8D8E8" opacity="0.8"/>
+  </g>
+</svg>
